@@ -4,10 +4,11 @@ class Solution:
     curr = 0
     end = len(num) - 1
     for i in range(len(num)):
+      jump = num[i]+i
       if i > curr:
         return False
-      if curr < num[i] + i:
-        curr = num[i] + i
+      if curr < jump:
+        curr = jump 
       if curr >= end:
         return True
 if __name__ == "__main__":
